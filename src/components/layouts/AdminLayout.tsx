@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { AppSidebar } from "../dashboard/Sidebar";
-import { SidebarProvider } from "../ui/sidebar";
+import { SidebarProvider, SidebarTrigger } from "../ui/sidebar";
 import ProtectedRoute from "../ProtectedRoute";
 
 export default function AdminLayout(){
@@ -9,6 +9,7 @@ export default function AdminLayout(){
        <ProtectedRoute>
          <SidebarProvider>
             <AppSidebar />
+           <SidebarTrigger className="sm:hidden fixed right-0 z-50" />
             <Outlet /> 
          </SidebarProvider>
        </ProtectedRoute>

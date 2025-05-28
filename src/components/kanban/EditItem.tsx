@@ -162,7 +162,6 @@ export function EditItemModal({
                 </>
               ) : (
                 <>
-                  <Plus className="mr-2" />
                   Save Changes 
                 </>
               )}      

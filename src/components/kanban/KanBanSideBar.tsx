@@ -1,5 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
-import { ChevronDown, ClipboardList, Home, LogOut, Mail, Settings, User } from "lucide-react";
+import { ChevronDown, ClipboardList, Home, LogOut, Mail, Package, Settings, User } from "lucide-react";
 import { Badge } from "@/components/ui/badge"
 import { Link } from "react-router-dom";
 
@@ -29,6 +29,11 @@ export default function KanbanSideBar() {
       icon: User,
       notificationCount: 10,
       path: "#"
+    },
+   {
+      name: "products",
+      icon: Package,
+      path: "/admin/products"
     },
     {
       name: "settings",
