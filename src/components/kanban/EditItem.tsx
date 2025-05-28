@@ -13,7 +13,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { KanbanListItem } from "@/types/kanban"
-import { Loader, Plus } from "lucide-react"
+import { Loader } from "lucide-react"
 import { FormEvent, ReactNode, useRef, useState } from "react"
 import toast from "react-hot-toast"
 
