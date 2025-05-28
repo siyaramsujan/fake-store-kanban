@@ -47,8 +47,8 @@ export function UserDetails({ user, refetch }: Props) {
             </Button>
           )}
           <div>
-            <h1 className="text-3xl font-semibold tracking-tight">User Details</h1>
-            <p className="text-muted-foreground">View and manage user information</p>
+            <h1 className="text-xl font-semibold tracking-tight">User Details</h1>
+            <p className="text-muted-foreground text-sm">View and manage user information</p>
           </div>
         </div>
         <div className="flex gap-2">
