@@ -5,6 +5,7 @@ import {
   LogOut,
   User,
   ChevronDown,
+  ListTodo,
 } from "lucide-react"
 
 import {
@@ -42,6 +43,11 @@ const mainItems = [
     title: "Users",
     url: "/admin/users",
     icon: Users,
+  },
+  {
+    title: "Kanban Board",
+    url: "/kanban/board",
+    icon: ListTodo,
   },
 ]
 

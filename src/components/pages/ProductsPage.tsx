@@ -10,7 +10,7 @@ export default function ProductsPage(){
 
   const { loading, data, refetch } = useFetchService({
     fetchFunction: () =>
-      productService.getProducts({
+     productService.getProducts({
         onFailure: (message) => toast.error(message),
       }),
   });

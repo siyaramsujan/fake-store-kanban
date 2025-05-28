@@ -37,6 +37,13 @@ export function AddNewProductModal({ refetch }: {
   const handleSubmit = async (e: FormEvent) => {
       
       e.preventDefault();
+
+
+      if (!data.title.trim()) {
+         toast.error("Title is required!");
+         return;
+      }
+
       setLoading(true);
 
       await productService.createNewProduct({

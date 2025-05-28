@@ -35,6 +35,12 @@ export function AddUserModal({ refetch }: {
   const handleSubmit = async (e: FormEvent) => {
       
       e.preventDefault();
+
+      if (!data.username.trim()) {
+         toast.error("Username is required!");
+         return;
+      }
+
       setLoading(true);
 
       await userService.createNewUser({

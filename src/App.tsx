@@ -9,6 +9,7 @@ import UsersPage from './components/pages/UsersPage';
 import NotFoundPage from './components/NotFoundPage';
 import UserDetailsPage from './components/pages/UserDetailsPage';
 import ProductsPage from './components/pages/ProductsPage';
+import KanbanBoard from './components/kanban/Board';
 
 function App() {
   return (
@@ -25,8 +26,9 @@ function App() {
              </PublicRoute>
           } />
 
-         
         <Route path="/" element={<Navigate to="/admin/products" replace />} />
+
+        <Route path="/kanban/board" element={<KanbanBoard />} />
 
          {/* ADMIN ROUTE */}
         <Route path="/admin" element={<AdminLayout />}>
