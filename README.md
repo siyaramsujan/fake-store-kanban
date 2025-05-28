@@ -1,54 +1,73 @@
-# React + TypeScript + Vite
+# Fake Store + Kanban Board
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📘 Project Overview
 
-Currently, two official plugins are available:
+This is a React + TypeScript project with two main parts:
+- **Fake Store** using the [Fake Store API](https://fakestoreapi.com/)
+- **Kanban Board** for task management with drag-and-drop support
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Both modules are in a single monorepo and share styles and components.
 
-## Expanding the ESLint configuration
+## ⚙️ Setup and Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+git clone https://github.com/your-username/fake-store-kanban.git
+cd fake-store-kanban
+npm install
+````
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 🔐 Environment Setup
+
+Create a `.env` file in the root of the project:
+
+```env
+VITE_FAKE_STORE_API_URL=https://fakestoreapi.com
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Then run the app:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm run dev
 ```
+
+
+## 🚀 Usage Guide
+
+* **Fake Store Dashboard**: CRUD for products and users
+* **Kanban Board**: Add, edit, delete and drag-and-drop tasks between columns
+
+
+## 📡 API Endpoints Reference
+
+Powered by [Fake Store API](https://fakestoreapi.com):
+
+* `POST /auth/login`
+* `GET /products`
+* `GET /products/:id`
+* `POST /products`
+* `PUT /products/:id`
+* `DELETE /products/:id`
+
+* `GET /users`
+* `GET /users/:id`
+* `POST /users`
+* `PUT /users/:id`
+* `DELETE /users/:id`
+
+
+## ✨ Bonus Features
+
+* drag-and-drop for Kanban
+* Skeleton on kanban item drag
+* Dynamic color badges for lists
+
+
+## 🌍 Live Deployment
+
+Hosted on **Vercel**
+👉 [https://fake-store-kanban.vercel.app](https://fake-store-kanban.vercel.app)
+
+**Credentials**:  
+• Username: `johnd`  
+• Password: `m38rmF$`
+

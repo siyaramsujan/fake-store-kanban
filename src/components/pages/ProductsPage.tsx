@@ -18,7 +18,7 @@ export default function ProductsPage(){
    return (
     <div className="h-full w-full p-2 md:p-6 space-y-6">
       <header className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <h1 className="text-3xl font-semibold tracking-tight text-gray-900">
+        <h1 className="text-2xl font-semibold tracking-tight text-gray-900">
           Products 
         </h1>
 

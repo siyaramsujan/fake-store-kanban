@@ -19,7 +19,7 @@ import { DeleteProductModal } from "./DeleteProductModal";
 
 export default function ProductCard({ product, refetch }: { product: Product, refetch: () => void }) {
   return (
-    <Card className="w-full h-full flex flex-col relative overflow-hidden">
+    <Card className="w-full h-full flex flex-col relative overflow-hidden transition-all ease-in-out duration-150 hover:shadow-lg">
       {/* Dropdown in top-right corner */}
       <div className="absolute top-2 right-2 z-10">
         <DropdownMenu>
