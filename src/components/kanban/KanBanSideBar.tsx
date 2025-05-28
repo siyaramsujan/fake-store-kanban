@@ -43,9 +43,9 @@ export default function KanbanSideBar() {
   ]
 
   return (
-    <div className="kanban-sidebar h-full w-16 md:w-22 bg-kanban-sidebar py-3 md:py-5 px-2 flex flex-col items-center">
+    <div className="kanban-sidebar h-full w-16 md:w-22 bg-kanban-sidebar py-3 md:py-5 px-2 flex flex-col items-center overflow-y-auto hide_scroll-bar">
       {/* Top Section - Logo & Avatar */}
-      <div className="sideBarTop mt-2 md:mt-5 space-y-6 md:space-y-10 w-full">
+      <div className="sideBarTop mt-2  space-y-6 w-full">
         <div className="sideBarLogo flex justify-center">
           <img className="w-10 h-auto md:w-full" src="/kanban-logo.png" alt="logo" />
         </div>
@@ -73,7 +73,7 @@ export default function KanbanSideBar() {
       </div>
 
       {/* Navigation Items */}
-      <div className="sideBarMid w-full mt-6 md:mt-10 flex flex-col items-center space-y-5 md:space-y-9">
+      <div className="sideBarMid w-full mt-6 flex flex-col items-center space-y-5">
         {navItems.map((item) => (
           <Link key={item.name} to={item.path}>
             <div className={`${activeItem === item.name ? "bg-white" : "bg-white/15"} relative p-2 md:p-3 cursor-pointer rounded-full shadow-lg hover:scale-110 transition-all ease-in duration-150`}>
@@ -93,7 +93,7 @@ export default function KanbanSideBar() {
       </div>
 
       {/* Bottom Section - Logout */}
-      <div className="h-full w-full flex items-end py-10 md:py-20 justify-center">
+      <div className="h-full w-full flex items-end py-10 justify-center">
         <div className="flex items-center justify-center w-full">
           <LogOut color="white" size={20} className="md:w-auto md:h-auto" />
         </div>
