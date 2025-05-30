@@ -11,7 +11,7 @@ Both modules are in a single monorepo and share styles and components.
 ## ⚙️ Setup and Installation
 
 ```bash
-git clone https://github.com/your-username/fake-store-kanban.git
+git clone https://github.com/siyaramsujan/fake-store-kanban.git
 cd fake-store-kanban
 npm install
 ````
